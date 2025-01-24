@@ -2,13 +2,15 @@ GitPython
 Pillow
 accelerate
 
-blendmodes
+numpy==1.26.4
+blendmodes==2024.1.1
 clean-fid
 diskcache
 einops
 facexlib
 fastapi>=0.90.1
 gradio==3.41.2
+numba==0.61.0
 inflection
 jsonmerge
 kornia
@@ -20,7 +22,7 @@ open-clip-torch
 piexif
 protobuf==3.20.0
 psutil
-pytorch_lightning
+pytorch-lightning==2.0.0
 requests
 resize-right
 

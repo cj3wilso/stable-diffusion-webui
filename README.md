@@ -3,6 +3,14 @@ A web interface for Stable Diffusion, implemented using Gradio library.
 
 ![](screenshot.png)
 
+## Create a virtual environment with correct Python to install requirements
+py -3.10 -m venv .venv
+.\.venv\Scripts\activate
+
+## Run the application:
+python launch.py
+http://localhost:7860
+
 ## Features
 [Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
 - Original txt2img and img2img modes
