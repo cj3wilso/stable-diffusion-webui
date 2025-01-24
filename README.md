@@ -3,6 +3,11 @@ A web interface for Stable Diffusion, implemented using Gradio library.
 
 ![](screenshot.png)
 
+## Install everything
+python -m pip install --upgrade --force-reinstall -r requirements.txt
+### Then check that cuda is available (GPU for this application)
+python -c "import torch; print(torch.cuda.is_available())"
+
 ## Create a virtual environment with correct Python to install requirements
 py -3.10 -m venv .venv
 .\.venv\Scripts\activate
