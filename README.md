@@ -13,8 +13,51 @@ py -3.10 -m venv .venv
 .\.venv\Scripts\activate
 
 ## Run the application:
-python launch.py
+.\.venv\Scripts\activate
+python launch.py --lowvram --xformers
+python launch.py --medvram --xformers
 http://localhost:7860
+
+## Setting up the Web UI to work with limited GPU
+Checkpoint: v1-5-pruned-emaonly.ckpt
+Sampling method: DPM++ 2M
+Resize to: 384x384
+
+Sampling Steps: 20-50
+CFG Scale: 7-9 (Higher values emphasize the prompt but may reduce creativity)
+Denoising Strength: 
+  Lower values (0.3 to 0.5): Retain more details from your uploaded photo
+  Higher values (0.6 to 0.8): Let the AI reimagine the image more freely
+
+## Best results
+Sampling Steps: 20
+(use low ram)
+
+### Superhero Diffusion Model: Having trouble with consistency
+CFG Scale: 7
+Denoising Strength: 0.6
+
+#### Think this one may be better
+CFG Scale: 9
+Denoising Strength: 0.6
+
+### Dreamshaper Model: Very consistent
+CFG Scale: 7
+Denoising Strength: 0.5
+
+### ToonYou Model: Very consistent
+CFG Scale: 9
+Denoising Strength: 0.5
+
+### Disney Pixar Model
+CFG Scale: 7
+Denoising Strength: 0.5
+
+## Positive Prompt
+A polished cartoon-style digital illustration of a 3-year-old girl, based on a profile photo (showing only her face). Brown hair, brown eyes, beige skin. With smooth textures, soft shading, bold and vibrant colors, and round, playful features. The face is highly detailed with big expressive eyes, a small button nose, and a gentle smile. The overall look is professional and consistent, suitable for a children's superhero book character. Solid light grey background.
+
+## Negative Prompt
+realism, realistic, photorealistic, sketch, line art, abstract, surreal, blurry, grainy, distorted, harsh lighting
 
 ## Features
 [Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
